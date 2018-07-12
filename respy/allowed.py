@@ -11,6 +11,7 @@ import lsst
 import lsst.afw
 import lsst.afw.math
 import lsst.afw.image
+import badmodule
 
 lsst_builtins = {}
 
@@ -26,3 +27,4 @@ lsst_builtins['lsst'] = lsst
 lsst_builtins['lsst.afw'] = lsst.afw
 lsst_builtins['lsst.afw.math'] = lsst.afw.math
 lsst_builtins['lsst.afw.image'] = lsst.afw.image
+lsst_builtins['badmodule'] = badmodule
