@@ -1,0 +1,4 @@
+if [ -f ~/.bashrc ]; then
+   . ~/.bashrc
+fi
+source /opt/lsst/software/stack/loadLSST.bash; setup lsst_distrib
