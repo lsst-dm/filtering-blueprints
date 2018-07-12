@@ -1,38 +1,11 @@
-# Working with RestrictedPython
+# Latest working examples
 
-Notebooks
----------
+## Initial connection to Kafka
 
-* [Exploring RestrictedPython](explore-restricted-python.ipynb)
+Assuming use with the [LSST DM alert_stream testbed](https://github.com/lsst-dm/alert_stream).
 
-To run notebooks
-----------------
+### Simple map/filter
 
-**Build Docker image from SQuARe's LSST Image** 
-
-```
-$ docker build -t "respy" .
-```
-
-**Run Docker image**
-
-Because of the way lsst_distrib needs to be setup, the CMD command **should not** be overridden.  
-/bin/bash must be used and is the default.  
-All other commands need to be run inside the container.
-
-```
-$ docker run -it --rm \
-	-v $PWD:/home/respy \
-	-v $PWD:/home/jovyan/work \
-	-p 8888:8888 \
-	respy
-```
-
-**Run Jupyter inside the container**
-
-```
-[lsst@respy] jupyter notebook --no-browser --ip=0.0.0.0
-```
-
-The address for the notebook will be given as http://<uid>:8888/?token=sometoken. You must replace the <uid> with localhost in your browser.
-
+* [How to use Spark Streaming from Kafka](snapshots/01-spark-streaming-kafka.md)
+* [How to use Spark Streaming from Kafka with Avro](snapshots/01-spark-streaming-kafka-avro.md)
+* [How to use Spark Structured Streaming from Kafka](snapshots/01-spark-struct-stream-kafka.md)
